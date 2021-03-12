@@ -1,0 +1,65 @@
+{% load static %}
+<div id="Content">
+            <div class="content_wrapper clearfix">
+                <div class="sections_group">
+                    <div class="entry-content">
+                         <div class="section" style="padding-top:60px; padding-bottom:5px; background-color:#fff; background-image:url(static/images/boss_section.jpg); background-repeat:no-repeat; background-position:center top; background-attachment:fixed; background-size:cover; -webkit-background-size:cover" data-stellar-background-ratio="0.5">
+                            <div class="section_wrapper clearfix">
+                                <div class="items_group clearfix">
+                                    <!-- One Fourth (1/4) Column -->
+                                    {% for noticia in noticia %}
+                                    <div class="column one-fourth column_our_team">
+                                        <!-- Team Member Area -->
+                                        <div class="team team_vertical">
+                                            <!-- Animated area -->
+                                            <div class="animate" data-anim-type="fadeInLeft">
+                                                <div class="image_frame no_link scale-with-grid">
+                                                    <div class="image_wrapper"><img class="scale-with-grid" src="{{ noticia.imagem.thumb.url }}" alt="Aposentado01" />
+                                                    </div>
+                                                </div>
+                                                <div class="desc_wrapper">
+                                                    <h4>{{ noticia.titulo }}</h4>
+                                                    <p class="subtitle">
+                                                        Instituto MeuRPPS
+                                                    </p>
+                                                    <hr class="hr_color" />
+                                                    <div class="desc">
+                                                        Aposentadoria do servidor público Nome do Servidor
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    <!-- One Fourth (1/4) Column -->
+                                    <div class="column one-fourth column_info_box">
+                                        <!-- Animated area -->
+                                        <div class="animate" data-anim-type="fadeInRight">
+                                            <div class="infobox" style="background-image:url(static/images/infobox.png);" align="left">
+                                                <h3>Escolha uma das opções!</h3>
+                                                <div class="infobox_wrapper" align="center">
+                                                    <ul>
+                                                        <li>
+                                                            <a class="mfn-link mfn-link-1" ontouchstart="this.classList.toggle('hover');" data-hover="Pesquisa de Satisfação" href="#" style = " font-size:14px">
+                                                              <span  data-hover="Pesquisa de Satisfação">Pesquisa de Satisfação</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="mfn-link mfn-link-1" ontouchstart="this.classList.toggle('hover');" data-hover="Cartilha Previdênciária" href="#">
+                                                              <span data-hover="Cartilha Previdênciária">Cartilha Previdênciária</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="mfn-link mfn-link-1" ontouchstart="this.classList.toggle('hover');" data-hover="Cálculo da Previdência" href="#">
+                                                              <span data-hover="Cálculo da Previdência">Cálculo da Previdência</span>
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="Subheader">
+                <div class="container">
+                    <div class="column one">
+                        <h1 class="title">Audiências Públicas </h1>
+                        <!--BreadCrumbs area-->
+                        <ul class="breadcrumbs">
+                            <li>
+                                <a href="{% url 'index' %}">Home</a><span><i - ></i></span>
+                            </li>
+                            <li>
+                                <a href="{% url 'index' %}">Audiências Públicas</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<p>&nbsp;</p>
+
+
+<!-- Main Content -->
+        <div id="Content">
+            <div class="content_wrapper clearfix">
+                <div class="sections_group">
+                    <div class="extra_content">
+
+                    </div>
+                    <div class="section">
+                        <div class="section_wrapper clearfix">
+                            <!--  Filter Area -->
+                             <!-- One full width row-->
+                            <p>&nbsp;</p>
+                            <h5 class="title" align="center">Audiência Pública 01 de 2021</h5>
+
+
+                            <div class="column one column_fancy_heading" align="center">
+                                <p><h5>Vídeo de exemplo de audiência </h5> </p>cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.
+
+
+                                <div class="content_video">
+                                                <iframe class="scale-with-grid" width="1176" height="662" src="http://player.vimeo.com/video/100524765?wmode=opaque" allowfullscreen=""></iframe>
+                                            </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+<!-- Footer-->
+{% include 'footer.html' %}
+<!-- final Footer-->
+{% endblock %}

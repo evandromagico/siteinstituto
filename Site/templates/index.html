@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Revolution slider area-->
+{% include 'revoSlider.html'%}
+<!-- Main Content -->
+
+<!-- inicio noticias -->
+{% include 'noticias.html'%}
+<!-- final noticias -->
+
+<!-- dados -->
+ {% include 'dados.html' %}
+<!-- final dados -->
+
+    <!-- começo slider  -->
+{% include 'modWowSlider.html' %}
+    <!-- final slider -->
+<!--  começo do maps -->
+ {% include 'maps.html' %}
+<!-- final do maps -->
+<!--   inicio contato final-->
+{% include 'contatoFinal.html' %}
+<!-- final contato final -->
+<!-- Footer-->
+{% include 'footer.html' %}
+<!-- final Footer-->
+
+{% endblock %}

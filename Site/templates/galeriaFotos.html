@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="Subheader">
+                <div class="container">
+                    <div class="column one">
+                        <h1 class="title">Galeria de Fotos</h1>
+                        <!--BreadCrumbs area-->
+                        <ul class="breadcrumbs">
+                            <li>
+                                <a href="{% url 'index' %}">Home</a><span><i - ></i></span>
+                            </li>
+                            <li>
+                                <a href="{% url 'index' %}">Galeria de Fotos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<p>&nbsp;</p>
+
+
+<!-- Main Content -->
+        <div id="wowslider-container1" class="boxed-wow">
+                                                <div class="ws_images">
+                                                    <ul>
+                                                        <li><img src="{% static 'images/wow-slider/1boxed.jpg' %}" alt="pic" title="pic" id="wows1_0"/></li>
+                                                        <li><img src="{% static 'images/wow-slider/2boxed.jpg' %}" alt="pic" title="pic" id="wows1_1"/></li>
+                                                        <li><img src="{% static 'images/wow-slider/3boxed.jpg' %}" alt="pic" title="pic" id="wows1_2"/></li>
+                                                        <li><img src="{% static 'images/wow-slider/4boxed.jpg' %}" alt="pic" title="pic" id="wows1_3"/></li>
+                                                        <li><img src="{% static 'images/wow-slider/5boxed.jpg' %}" alt="pic" title="pic" id="wows1_4"/></li>
+                                                        <li><img src="{% static 'images/wow-slider/6boxed.jpg' %}" alt="pic" title="pic" id="wows1_5"/></li>
+                                                        <li><img src="{% static 'images/wow-slider/7boxed.jpg' %}" alt="pic" title="pic" id="wows1_6"/></li>
+                                                        <li><img src="{% static 'images/wow-slider/8boxed.jpg' %}" alt="pic" title="pic" id="wows1_7"/></li>
+                                                        <li><img src="{% static 'images/wow-slider/9boxed.jpg' %}" alt="pic" title="pic" id="wows1_8"/></li>
+                                                        <li><img src="{% static 'images/wow-slider/10boxed.jpg' %}" alt="pic" title="pic" id="wows1_9"/></li>
+                                                        <li><img src="{% static 'images/wow-slider/11boxed.jpg' %}" alt="pic" title="pic" id="wows1_10"/></li>
+                                                        <li><img src="{% static 'images/wow-slider/12boxed.jpg' %}" alt="pic" title="pic" id="wows1_11"/></li>
+                                                        <li><img src="{% static 'images/wow-slider/13boxed.jpg' %}" alt="pic" title="pic" id="wows1_12"/></li>
+                                                    </ul>
+                                                </div>
+
+
+
+                                                <div class="ws_thumbs">
+                                                    <div>
+                                                        <a href="#"><img src="{% static 'images/wow-slider/tooltips/1boxed.jpg' %}" alt="1" /></a>
+                                                        <a href="#"><img src="{% static 'images/wow-slider/tooltips/2boxed.jpg' %}" alt="2" /></a>
+                                                        <a href="#"><img src="{% static 'images/wow-slider/tooltips/3boxed.jpg' %}" alt="3" /></a>
+                                                        <a href="#"><img src="{% static 'images/wow-slider/tooltips/4boxed.jpg' %}" alt="4" /></a>
+                                                        <a href="#"><img src="{% static 'images/wow-slider/tooltips/5boxed.jpg' %}" alt="5" /></a>
+                                                        <a href="#"><img src="{% static 'images/wow-slider/tooltips/6boxed.jpg' %}" alt="6" /></a>
+                                                        <a href="#"><img src="{% static 'images/wow-slider/tooltips/7boxed.jpg' %}" alt="7" /></a>
+                                                        <a href="#"><img src="{% static 'images/wow-slider/tooltips/8boxed.jpg' %}" alt="8" /></a>
+                                                        <a href="#"><img src="{% static 'images/wow-slider/tooltips/9boxed.jpg' %}" alt="9" /></a>
+                                                        <a href="#"><img src="{% static 'images/wow-slider/tooltips/10boxed.jpg' %}" alt="10" /></a>
+                                                        <a href="#"><img src="{% static 'images/wow-slider/tooltips/11boxed.jpg' %}" alt=11"" /></a>
+                                                        <a href="#"><img src="{% static 'images/wow-slider/tooltips/12boxed.jpg' %}" alt="12" /></a>
+                                                        <a href="#"><img src="{% static 'images/wow-slider/tooltips/13boxed.jpg' %}" alt="13" /></a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!-- Footer-->
+{% include 'footer.html' %}
+<!-- final Footer-->
+{% endblock %}

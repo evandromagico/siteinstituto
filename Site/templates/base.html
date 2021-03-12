@@ -1,0 +1,450 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 "> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+<html class="no-js" xmlns:padding-top="http://www.w3.org/1999/xhtml">
+<!--<![endif]-->
+
+<head>
+
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>Página Inicial</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+
+    <!-- FONTS -->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+
+    <!-- CSS -->
+    <link rel='stylesheet' href="{% static 'css/global.css' %}">
+    <link rel='stylesheet' href="{% static 'css/structure.css' %}">
+    <link rel='stylesheet' href="{% static 'css/business.css' %}">
+    <link rel='stylesheet' href="{% static 'css/custom.css' %}">
+
+
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="{% static 'plugins/rs-plugin/css/settings.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/wow-slider/scripts/style.css' %}" />
+
+</head>
+
+<body class="template-slider color-blue layout-full-width header-modern sticky-header sticky-white subheader-title-left"padding-top: 60px;>
+    <!-- Hidden Top Area -->
+    <div id="Sliding-top">
+        <div class="widgets_wrapper">
+            <div class="container">
+                <div class="one-fourth column">
+                    <!-- Login form -->
+                    <aside id="widget_mfn_login-2" class="widget widget_mfn_login">
+                        <div class="mfn-login">
+                            <h4>Login | Registro</h4>
+                            <form name="loginform" id="loginform" action="#" method="post">
+                                <p class="login-username">
+                                    <label for="user_login">Usuário</label>
+                                    <input type="text" name="log" id="user_login" class="input" value="" size="20" />
+                                </p>
+                                <p class="login-password">
+                                    <label for="user_pass">Senha</label>
+                                    <input type="password" name="pwd" id="user_pass" class="input" value="" size="20" />
+                                </p>
+                                <p class="login-submit">
+                                    <input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="Entrar" />
+                                    <input type="hidden" name="redirect_to" value="#" />
+                                </p>
+                            </form>
+                            <div class="links">
+                                <a href="#">Cadastrar</a><span class="sep">|</span><a href="#">Esqueceu sua Senha?</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="one-fourth column">
+                    <!-- Text Area -->
+                    <aside id="text-10" class="widget widget_text">
+                        <div class="textwidget">
+                           <p style="text-align: center;"><span class="big">Precisa de ajuda?</span></p>
+<p><span class="themecolor" style="font-size: 40px; line-height: 40px; display: block; text-align: center; margin-bottom: 15px; font-family: Patua One, serif;">Venha fazer<br />uma visita</span></p>
+<p style="margin-bottom: 0; text-align: center;"><span style="color: #9c9c9c;">Ofererecemos o melhor atendimento aos nossos segurados</span>&nbsp;<br /><strong> Seg - Sext 8:00 &agrave;s 18:00</strong></p>
+                        </div>
+                    </aside>
+                </div>
+                <div class="one-fourth column">
+                    <!-- Text Area -->
+                    <aside id="text-11" class="widget widget_text">
+                        <div class="textwidget">
+                            <h5 class="hrmargin_b_5"><img src="{% static 'images/icones/icon_endereco.png' %}" alt="" width="15" height="15" /> Nosso Endereço:</h5>
+                            <p classs="hrmargin_l_26">
+                                <strong>MeuRPPS</strong>
+                                <br> Endereço do Instituto
+                                <br> Bairro, Cidade/SC
+                            </p>
+                            <h5 class="hrmargin_b_5"><img src="{% static 'images/icones/icon_email.png' %}" alt="" width="15" height="15" /> Tem uma pergunta?</h5>
+                            <p classs="hrmargin_l_26">
+                                <a href="mailto:contato@meurpps.com.br">contato@meurpps.com.br</a>
+                            </p>
+                            <h5 class="hrmargin_b_5"><img src="{% static 'images/icones/icon_fone.png' %}" alt="" width="15" height="15" /> Ligue para nós:</h5>
+                            <p classs="hrmargin_l_26">
+                                <a href="tel:+5547999000000">+55 (47) 99900-0000</a>
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+                <div class="one-fourth column">
+                    <!-- Text Area -->
+                    <aside id="text-12" class="widget widget_text">
+                        <div class="textwidget"><img src="{% static 'images/logo_footer.png' %}" alt="">
+                            <p>
+                                <span class="big">"A melhor idade é o momento vivido, a amizade conquista, a felicidade transmitida, o amor verdadeiro, o sucesso por seus próprios méritos. Portanto viva todos os momentos com autenticidade e intensidade"</span>
+                            </p>
+
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="sliding-top-control"><span><img src="{% static 'images/icones/icone_up.png' %}" alt="" width="10" height="10" /><img src="{% static 'images/icones/icone_down.png' %}" alt="" width="10" height="10" /> </span></a>
+    </div>
+    <!-- Main Theme Wrapper -->
+    <div id="Wrapper">
+        <!-- Header Wrapper -->
+        <div id="Header_wrapper">
+            <!-- Header -->
+            <header id="Header">
+                <!-- Header Top -  Info Area -->
+                <div id="Action_bar">
+                    <div class="container">
+                        <div class="column one">
+                            <!-- Header - contact info area-->
+
+                            <!--Social info area-->
+                            <ul style="text-align: right"; class="MenuSuperior">
+
+                               <a class="mfn-link mfn-link-3" ontouchstart="this.classList.toggle('hover');" data-hover="Transparência" href="#"> <span data-hover="Transparência">Transparência</span> </a>
+                               <a class="mfn-link mfn-link-3" ontouchstart="this.classList.toggle('hover');" data-hover="Ouvidoria" href="#"> <span data-hover="Ouvidoria">Ouvidoria</span> </a>
+                               <a class="mfn-link mfn-link-3" ontouchstart="this.classList.toggle('hover');" data-hover="Diário Oficial" href="#"> <span data-hover="Diário Oficial">Diário Oficia</span> </a>
+                               <a class="mfn-link mfn-link-3" ontouchstart="this.classList.toggle('hover');" data-hover="Portal do Governo do Estado" href="#"> <span data-hover="Portal do Governo do Estado">Portal do Governo do Estado</span> </a>
+                               <a class="mfn-link mfn-link-3" ontouchstart="this.classList.toggle('hover');" data-hover="Secretaria de Previdência" href="#"> <span data-hover="Secretaria de Previdência">Secretaria de Previdência</span> </a>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header -  Logo and Menu area -->
+                <div id="Top_bar" style="top: 55px">
+                    <div class="container">
+                        <div class="column one">
+                            <div class="top_bar_left clearfix">
+                                <!-- Logo-->
+                                <div class="logo">
+                                    <h1><a id="logo" href="{% url 'index' %}" title="Meu RPPS"><img class="scale-with-grid" src="{% static 'images/logo.png' %}" alt="BeBusiness - BeTheme" /></a></h1>
+                                </div>
+                                <!-- Main menu-->
+                                <div class="menu_wrapper">
+                                    <nav id="menu">
+                                        <ul id="menu-main-menu" class="menu">
+                                            <li class="current_page_item">
+                                                <a href="{% url 'index' %}"><span>Home</span></a>
+                                            </li>
+                                            <li>
+                                                <a href=""><span>Instituto</span></a>
+                                                <ul class="sub-menu">
+    <li><a href="/historico/"><span>Histórico</span></a></li>
+	<li><a href="/principios/"><span>Princípios</span></a></li>
+	<li><a href="/codigo-etica/"><span>Código de Ética</span></a></li>
+    <li><a href="/equipe/"><span>Equipe</span></a></li>
+	<li><a href="/concurso/"><span>Concurso</span></a></li>
+	<li><a href="/educacao-previdenciaria/"><span>Educação Previdenciária</span></a></li>
+	<li><a href="/plano-acao/"><span>Plano de Ação</span></a></li>
+	<li><a href="/gestao-e-controle-interno/"><span>Gestão e Controle Interno</span></a></li>
+	<li><a href="/pesquisa-de-satisfacao/"><span>Pesquisa de Satisfação</span></a></li>
+	<li><a href="/cartilha-previdenciaria/"><span>Cartilha Previdenciária</span></a></li>
+	<li><a href="/pre-pos-aposentadoria"><span>Pré/Pós Aposentadoria</span></a></li>
+	<li><a href="/seguranca-informacao/"><span>Segurança da Informação</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href=""><span>Legislação</span></a>
+                                                <ul class="sub-menu">
+    <li><a href="/constituicao-federal/"><span>Constituição Federal</span></a></li>
+	<li><a href="/instrucoes-normativas-mps/"><span>Instruções Normativas MPS</span></a></li>
+	<li><a href="/leis-federais/"><span>Leis Federais</span></a></li>
+	<li><a href="/orientacoes-mps/"><span>Orientações MPS</span></a></li>
+	<li><a href="/portarias/"><span>Portarias MPS</span></a></li>
+	<li><a href="/resolucoes-cmn/"><span>Resoluções CMN</span></a></li>
+	<li><a href="/leis-municipais/"><span>Leis Municipais</span></a></li>
+	<li><a href="/portarias-instituto/"><span>Portarias Instituto</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href=""><span>Prestação de Contas</span></a>
+                                                <ul class="sub-menu">
+	<li><a href="/audiencia-publica/"><span>Audiência Pública</span></a></li>
+	<li><a href="/balancete-anual/"><span>Balancete Anual</span></a></li>
+	<li><a href="/balancete-mensal/"><span>Balancete Mensal</span></a></li>
+	<li><a href="/crp/"><span>CRP – Certificado de Regularidade Previdenciária</span></a></li>
+	<li><a href="/calculo-atuarial/"><span>O que é Cálculo Atuarial?</span></a></li>
+	<li><a href="/calculo-atuarial-anual/"><span>Cálculo Atuarial Anual</span></a></li>
+	<li><a href="/demonstrativo-financeiro/"><span>Demonstrativos Financeiros</span></a></li>
+	<li><a href="/politica-investimento/"><span>Política de Investimentos</span></a></li>
+	<li><a href="/acordaos-tce/"><span>Acordãos TCE</span></a></li>
+	<li><a href="/certidoes-negativas/"><span>Certidões Negativas</span></a></li>
+	<li><a href="/cronograma-de-pagamentos/"><span>Cronograma de Pagamentos</span></a></li>
+	<li><a href="/contratos-licitacoes/"><span>Contratos e Licitações</span></a></li>
+</ul>
+                                            </li>
+                                            <li>
+                                                <a href=""><span>Conselhos</span></a>
+                                                <ul class="sub-menu">
+	<li><a href="#"><span>Fiscal</span></a>
+	<ul class="sub-menu">
+		<li><a href="/membrosFiscal/"><span>Membros</span></a></li>
+		<li><a href="/calendario-fiscal/"><span>Calendário de Reuniões</span></a></li>
+		<li><a href="/fiscal-ata/"><span>Atas das Reuniões</span></a></li>
+		<li><a href="/fiscal-resolucoes/"><span>Resoluções</span></a></li>
+		<li><a href="/fiscal-regimento/"><span>Regimento Interno</span></a></li>
+	</ul>
+</li>
+	<li><a href="#"><span>Deliberativo</span></a>
+	<ul class="sub-menu">
+		<li><a href="/membrosDelibe/"><span>Membros</span></a></li>
+		<li><a href="/calendario-deliberativo/"><span>Calendário de Reuniões</span></a></li>
+		<li><a href="/atas-deliberativo/"><span>Atas de Reuniões</span></a></li>
+		<li><a href="/resolucoes-deliberativo/"><span>Resoluções</span></a></li>
+		<li><a href="/regimento-deliberativo/"><span>Regimento Interno</span></a></li>
+	</ul>
+</li>
+	<li><a href="#"><span>Comitê de Investimento</span></a>
+	<ul class="sub-menu">
+		<li><a href="/membrosComite/"><span>Membros</span></a></li>
+		<li><a href="/comite-calendario/"><span>Calendário de Reuniões &#8211; Comitê de Investimento</span></a></li>
+		<li><a href="/comite-ata/"><span>Atas de Reuniões</span></a></li>
+		<li><a href="/comite-resolucoes/"><span>Resoluções</span></a></li>
+		<li><a href="/comite-regimento/"><span>Regimento Interno</span></a></li>
+		<li><a href="/composicao-carteira-investimento"><span>Composição da Carteira de Investimentos</span></a></li>
+		<li><a href="/politica-investimento/"><span>Política de Investimentos</span></a></li>
+		<li><a href="/comite-credenciamento/"><span>Credenciamento das Instituições Financeiras</span></a></li>
+		<li><a href="/relatorio-mensal-investimentos/"><span>Relatório Mensal de Investimentos</span></a></li>
+		<li><a href="/relatorio-anual-investimentos/"><span>Relatório Anual de Investimentos</span></a></li>
+		<li><a href="/apr/"><span>APRs</span></a></li>
+	</ul>
+</li>
+</ul>
+                                            </li>
+                                            <li>
+                                                <a href=""><span>Comunicação</span></a>
+                                                <ul class="sub-menu">
+	<li><a href="/pagenoticia/"><span>Notícias</span></a></li>
+	<li><a href="/galeria-fotos/"><span>Galeria de Fotos</span></a></li>
+	<li><a href="/pesquisa-de-satisfacao/"><span>Pesquisa de Satisfação</span></a></li>
+	<li><a href="/resultado-pesquisa/"><span>Resultado da Pesquisa</span></a></li>
+</ul>
+                                            </li>
+                                             <li>
+                                                <a href=""><span>Segurados</span></a>
+                                                 <ul class="sub-menu">
+	<li><a href="/niver/"><span>Aniversariantes do Mês</span></a></li>
+	<li><a href="#"><span>Meu RPPS</span></a></li>
+</ul>
+                                            </li>
+                                             <li>
+                                                <a href="/contact/"><span>Fale Conosco</span></a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <a class="responsive-menu-toggle" href="#"> <img src="{% static 'images/icones/menu.png' %}" alt="" width="40" height="40" /> </a>
+                                </div>
+
+                                <!-- Header Searchform area-->
+                                <div class="search_wrapper">
+                                    <form method="get" id="searchform" action="#">
+                                        <i class="icon_search icon-search"></i><a href="#" class="icon_close"><i class="icon-cancel"></i></a>
+                                        <input type="text" class="field" name="s" id="s" placeholder="Buscar por:" />
+                                        <input type="submit" class="submit flv_disp_none" value="" />
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="top_bar_right">
+                                <div class="top_bar_right_wrapper">
+                                    <a id="search_button" href="#"><img src="{% static 'images/icones/search01.png' %}" alt="" width="20" height="20" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                {% block content %} {% endblock %}
+
+    <!-- JS -->
+    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+
+    <script src="{% static 'js/mfn.menu.js' %}"></script>
+    <script src="{% static 'js/jquery.plugins.js' %}"></script>
+    <script src="{% static 'js/jquery.jplayer.min.js' %}"></script>
+    <script src="{% static 'js/animations/animations.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+
+
+
+
+    <script src="{% static 'plugins/rs-plugin/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'plugins/rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <script src="{% static 'plugins/rs-plugin/js/extensions/revolution.extension.video.min.js' %}"></script>
+    <script src="{% static 'plugins/rs-plugin/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+    <script src="{% static 'plugins/rs-plugin/js/extensions/revolution.extension.actions.min.js' %}"></script>
+    <script src="{% static 'plugins/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+    <script src="{% static 'plugins/rs-plugin/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+    <script src="{% static 'plugins/rs-plugin/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+    <script src="{% static 'plugins/rs-plugin/js/extensions/revolution.extension.migration.min.js' %}"></script>
+    <script src="{% static 'plugins/rs-plugin/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+
+    <script src="{% static 'plugins/wow-slider/scripts/wowslider.js' %}"></script>
+    <script src="{% static 'plugins/wow-slider/scripts/script-cube_over.js' %}"></script> <!-- change WOWSlider effect here -->
+
+    <script>
+        var tpj = jQuery;
+        tpj.noConflict();
+        var revapi1;
+        tpj(document).ready(function() {
+            if (tpj("#rev_slider_1_2").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_1_2");
+            } else {
+                revapi1 = tpj("#rev_slider_1_2").show().revolution({
+                    sliderType: "standard",
+                    sliderLayout: "auto",
+                    dottedOverlay: "none",
+                    delay: 6000,
+                    navigation: {
+                        keyboardNavigation: "off",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        onHoverStop: "on",
+                        touch: {
+                            touchenabled: "on",
+                            swipe_threshold: 0.7,
+                            swipe_min_touches: 1,
+                            swipe_direction: "horizontal",
+                            drag_block_vertical: false
+                        },
+                        arrows: {
+                            style: "uranus",
+                            enable: true,
+                            hide_onmobile: false,
+                            hide_onleave: false,
+                            tmp: '',
+                            left: {
+                                h_align: "right",
+                                v_align: "bottom",
+                                h_offset: 90,
+                                v_offset: 40
+                            },
+                            right: {
+                                h_align: "right",
+                                v_align: "bottom",
+                                h_offset: 40,
+                                v_offset: 40
+                            }
+                        }
+                    },
+                    gridwidth: 1180,
+                    gridheight: 700,
+                    lazyType: "none",
+                    shadow: 0,
+                    spinner: "spinner3",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "on",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    startWithSlide: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: "off",
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        jQuery(window).load(function() {
+            var retina = window.devicePixelRatio > 1 ? true : false;
+            if (retina) {
+                var retinaEl = jQuery("#logo img");
+                var retinaLogoW = retinaEl.width();
+                var retinaLogoH = retinaEl.height();
+                retinaEl.attr("src", static/images/retina-business.png ).width(retinaLogoW).height(retinaLogoH)
+            }
+        });
+    </script>
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+	$('#bt_calcular_tempo').click(function (){
+		$('#div_form_calcular_tempo').toggle(1000);
+	});
+
+    $('#widget_bt_calculo_tempo_topo').submit(function()
+    {
+        $.ajax({
+            type: "POST",
+            url: "https://187.44.127.170:8006/tmp/tempo/funcoes.php?f=calculo_tempo",
+            //data: jQuery(this).serialize(),
+            data: {'data_inicial' : $('#data_inicial_topo').val(),
+            	'data_final' : $('#data_final_topo').val()},
+            Accept: 'application/json; charset=utf-8',
+            beforeSend: function()
+            {
+            	//$("#widget_bt_calculo_tempo_topo #label_mensagem").html('');
+                $("#widget_bt_calculo_tempo_topo :input").prop("disabled", true);
+            },
+            success: function(response)
+            {
+                var data = jQuery.parseJSON(response);
+                console.log(data);
+                if(data.ok == 'true') {
+                	$('#widget_label_calculo_tempo_extenso_topo').html(data.extenso);
+                	$('#widget_label_calculo_tempo_total_dias_topo').html('Total: ' + data.total_dias + ' dias');
+                }
+	            $("#widget_bt_calculo_tempo_topo :input").prop("disabled", false);
+            },
+            error: function(err) {
+            	//$("#widget_bt_calculo_tempo_topo #label_mensagem").html('<div class="alert alert-block alert-danger">' + data.mensagem + '</div>');
+            	$("#widget_bt_calculo_tempo_topo :input").prop("disabled", false);
+                console.log(err);
+            }
+        });
+
+        return false;
+    });
+
+});
+</script>
+
+
+
+</body>
+
+</html>

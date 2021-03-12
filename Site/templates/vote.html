@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="Subheader">
+                <div class="container">
+                    <div class="column one">
+                        <h1 class="title">Pesquisa de Satisfação</h1>
+                        <!--BreadCrumbs area-->
+                        <ul class="breadcrumbs">
+                            <li>
+                                <a href="{% url 'index' %}">Home</a><span><i - ></i></span>
+                            </li>
+                            <li>
+                                <a href="{% url 'index' %}">Pesquisa de Satisfação</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<p>&nbsp;</p>
+
+
+<!-- Main Content -->
+
+<div class="column one column_fancy_heading" style="padding-top:60px; padding-bottom:5px; background-color:#fff; ); background-repeat:no-repeat; background-position:center top; background-attachment:fixed; background-size:cover; -webkit-background-size:cover" data-stellar-background-ratio="0.5">
+
+                                 <div class="section" id="accordion flv_sections_16">
+                            <div class="section_wrapper clearfix">
+                                <div class="items_group clearfix">
+                                    <!-- One Second (1/2) Column -->
+                                    <div class="column one column_column">
+                                         <div class="animate" data-anim-type="fadeInLeft">
+<form method="POST">
+    {% csrf_token %}
+<table class="table_pesquisa">
+    <thead>
+        <tr>
+            <th> </th><th>Ótimo</th><th>Bom</th><th>Regular</th><th>Ruim</th><th></th>
+        </tr>
+    </thead>
+    <tbody> {% for dados in enquete %}
+        <tr>
+            <td style="text-align: left">
+
+            </td>
+            <td>
+        <div style="center"><label><input class="" type="radio" name="enquete" value="option01"></label></div>
+            </td>
+            <td>
+        <div style="center"><label><input class="" type="radio" name="enquete" value="option02"></label></div>
+            </td>
+            <td>
+        <div style="center"><label><input class="" type="radio" name="enquete" value="option03"></label></div>
+            </td>
+            <td>
+        <div style="center"><label><input class="" type="radio" name="enquete" value="option04"></label></div>
+            </td>
+            <td>
+                <button onclick="#"> votar</button>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+</form>
+
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+<p>&nbsp;</p>
+
+
+
+
+
+
+<!-- Footer-->
+{% include 'footer.html' %}
+<!-- final Footer-->
+{% endblock %}
+
+
+
+

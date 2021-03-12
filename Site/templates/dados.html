@@ -1,0 +1,58 @@
+{% load static %}
+<div class="section sections_style_3">
+                            <div class="section_wrapper clearfix">
+                                <div class="items_group clearfix">
+<div class="section center">
+
+<div class="hr_wide">
+    <hr class="hr_narrow">
+
+</div>
+                        <p>
+    &nbsp;
+</p>
+
+{% for dados in titulo %}
+ <div class="animate" data-anim-type="zoomInDown">
+
+
+
+<div class="column one-third column_info_box">
+<div class="quick_fact animate-math">
+    <div class="number" data-to="{{dados.valor01}}">{{dados.valor01}}</div>
+    <h3 class="title">{{dados.contador01}}</h3>
+
+    </div>
+</div>
+
+<div class="column one-third column_info_box">
+<div class="quick_fact animate-math">
+    <div class="number" data-to="{{dados.valor02}}">{{dados.valor02}}</div>
+    <h3 class="title">{{dados.contador02}}</h3>
+
+    </div>
+</div>
+
+<div class="column one-third column_info_box">
+<div class="quick_fact animate-math">
+    <div class="number" data-to="{{dados.valor03}}">{{dados.valor03}}</div>
+    <h3 class="title">{{dados.contador03}}</h3>
+
+    </div>
+</div>
+
+</div>
+    {% endfor %}
+
+<div class="hr_wide">
+    <hr class="hr_narrow">
+
+</div>
+<p>
+    &nbsp;
+</p>
+
+</div>
+</div>
+</div>
+</div>

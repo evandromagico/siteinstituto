@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="Subheader">
+                <div class="container">
+                    <div class="column one">
+                        <h1 class="title">Aniversariantes do mês</h1>
+                        <!--BreadCrumbs area-->
+                        <ul class="breadcrumbs">
+                            <li>
+                                <a href="{% url 'index' %}">Home</a><span><i - ></i></span>
+                            </li>
+                            <li>
+                                <a href="">Aniversário</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<p>&nbsp;</p>
+
+<!-- Main Content -->
+        <div id="Content">
+            <div class="content_wrapper clearfix">
+                <div class="sections_group">
+                    <div class="entry-content">
+                        <div class="section flv_sections_13">
+                            <div class="section_wrapper clearfix">
+                                <div class="items_group clearfix">
+
+                                    <p>&nbsp;</p>
+                                    <!-- Page Title-->
+                                    <!-- One full width row-->
+                                    <div class="column one column_fancy_heading">
+                                        <div class="fancy_heading fancy_heading_icon">
+                                            <span class="icon_top"><img src="{% static 'images/icones/icone_niver.png' %}" alt="" width="70" height="70" /></span>
+                                            <h2 class="title">Aniversariantes do mês de Julho</h2>
+                                            <div class="inside">
+                                                Parabéns aos aniversariantes do mês de Julho, que suas vidas sejam repletas de paz e felicidades!
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Timeline element -->
+                                    <div class="column one column_divider">
+                                        <hr class="flv_margin_40" />
+                                    </div>
+                                     <p>&nbsp;</p>
+                                    <!-- One full width row-->
+                                    <div class="column one column_timeline">
+                                        <ul class="timeline_items">
+                                            <li>
+                                                <h3><span>5 Julho </span>Jason Collins</h3>
+
+                                            </li>
+                                            <li>
+                                                <h3><span>17 Julho</span>Brandon Felly</h3>
+
+                                            </li>
+                                            <li>
+                                                <h3><span>22 Julho</span>Maycon Fox</h3>
+
+                                            </li>
+                                             <li>
+                                                <h3><span>25 Julho</span>Rebeka Martins</h3>
+
+                                            </li>
+                                             <li>
+                                                <h3><span>28 Julho</span>Britney Potter</h3>
+
+                                            </li>
+                                             <li>
+                                                <h3><span>30 Julho</span>Jeniffer Clowd</h3>
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Page devider -->
+                                    <!-- One full width row-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- Footer-->
+{% include 'footer.html' %}
+<!-- final Footer-->
+{% endblock %}

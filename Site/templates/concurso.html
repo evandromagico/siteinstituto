@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="Subheader">
+                <div class="container">
+                    <div class="column one">
+                        <h1 class="title">Concursos</h1>
+                        <!--BreadCrumbs area-->
+                        <ul class="breadcrumbs">
+                            <li>
+                                <a href="{% url 'index' %}">Home</a><span><i - ></i></span>
+                            </li>
+                            <li>
+                                <a href="{% url 'index' %}">Concursos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<p>&nbsp;</p>
+
+
+<!-- Main Content -->
+        <div id="Content">
+            <div class="content_wrapper clearfix">
+                <div class="sections_group">
+                    <div class="entry-content">
+                        <div class="section" style="padding-top:60px; padding-bottom:30px; background-color:#edeff2">
+                            <div class="section_wrapper clearfix">
+                                <div class="items_group clearfix">
+                                    <!-- One full width row-->
+                                    <div class="column one column_fancy_heading">
+                                        <div class="fancy_heading fancy_heading_icon">
+                                            <h2 class="title">Concursos</h2>
+                                            <div class="inside">
+                                                <p class="big" style="margin: 0 10%;">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- One Third (1/3) Column -->
+
+                                    <!-- Page devider -->
+                                    <!-- One full width row-->
+                                    <div class="column one column_divider">
+                                        <hr class="no_line" />
+                                    </div>
+                                    <!-- One Third (1/3) Column -->
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section sections_style_2">
+                            <div class="section_wrapper clearfix">
+                                <div class="items_group clearfix">
+                                    <!-- One full width row-->
+                                {% for dados in concurso %}
+
+<div id="{{dados.id}}" class="modal-container">
+    <div class="modalPDF">
+         <button onclick="iniciaModalFechar('{{dados.id}}')" class="fechar">x</button>
+        <h3 style="color: black" align="center"> {{dados.titulo}} </h3>
+        <iframe  src="{{dados.arquivo.url}}" width="100%" height="90%" type='application/pdf'> </iframe>
+
+    </div>
+
+
+</div>
+                                    <!-- One Fourth (1/4) Column -->
+                                    <div class="column one-fourth column_how_it_works">
+                                            <div class="image"><img src="{{dados.imagem.url}}"></span>
+                                            </div>
+                                    </div>
+                                    <!-- Three Fourth (3/4) Column -->
+                                    <div class="column three-fourth column_column">
+                                        <div class="column_attr ">
+                                            <h4 style="margin-bottom: 3px; color: #8E8E8E;"></h4>
+                                            <h2>{{dados.titulo}}</h2>
+                                          <a class="mfn-link mfn-link-2 " onclick="iniciaModal('{{dados.id}}')" style="cursor: pointer;" data-hover="Baixar Edital"><span data-hover="Baixar Edital">Baixar Edital</span></a>
+
+                                            <p class="big">
+                                                {{dados.descricao|linebreaks}}
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <!-- Page devider -->
+                                    <!-- One full width row-->
+                                    <div class="column one column_divider">
+                                        <div class="hr_dots hrmargin_b_30">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+
+
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section the_content">
+                            <div class="section_wrapper">
+                                <div class="the_content_wrapper"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Footer-->
+{% include 'footer.html' %}
+<!-- final Footer-->
+
+
+<!-- codigo e script para o modal -->
+<style>
+.modal-container {
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,.8);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index:2000;
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+}
+
+
+.modal-container.mostrar {
+
+display:flex;
+
+}
+
+.modalPDF {
+        background: white;
+        width: 70%;
+        height: 80%;
+        padding: 10px;
+        box-shadow: 0 0 0 10px white;
+        position: relative;
+        color: white;
+
+    }
+
+@keyframes modalAnim{
+
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.mostrar .modalPDF{
+    animation: modalAnim .3s;
+}
+.fechar {
+        position: absolute;
+        font-size: 2em;
+        top: -30px;
+        right: -30px;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,.3);
+
+    }
+
+</style>
+
+
+
+
+
+<script>
+  function iniciaModal(modalID){
+    const modal = document.getElementById(modalID);
+    modal.classList.add('mostrar');
+  }
+  function iniciaModalFechar(modalID){
+    const modal = document.getElementById(modalID);
+    modal.classList.remove('mostrar');
+  }
+
+</script>
+<!-- final codigo e script para o modal -->
+
+{% endblock %}
+

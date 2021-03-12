@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="Subheader">
+                <div class="container">
+                    <div class="column one">
+                        <h1 class="title">Membros da Equipe do Instituto</h1>
+                        <!--BreadCrumbs area-->
+                        <ul class="breadcrumbs">
+                            <li>
+                                <a href="{% url 'index' %}">Home</a><span><i - ></i></span>
+                            </li>
+                            <li>
+                                <a href="">Membros Instituto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<p>&nbsp;</p>
+
+ <!-- Main Content -->
+        <div id="Content">
+            <div class="content_wrapper clearfix">
+                <div class="sections_group">
+                    <div class="entry-content">
+                        <div class="section sections_style_0 ">
+                            <div class="section_wrapper clearfix">
+                                <div class="items_group clearfix">
+                                    <p>&nbsp;</p>
+
+                                    <!-- One full width row-->
+                                    <div class="column one column_fancy_heading">
+                                        <div class="fancy_heading fancy_heading_icon">
+
+                                            <h2 class="title">Conheça nossa equipe</h2>
+                                            <div class="inside">
+
+                                                <div class="big">
+                                                    Equipe responsável pelo Instituto
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Page devider -->
+                                    <!-- One full width row-->
+                                    <div class="column one column_divider">
+                                        <div class="hr_zigzag hrmargin_b_40">
+                                            <i class="icon-down-open"></i><i class="icon-down-open"></i><i class="icon-down-open"></i>
+                                        </div>
+                                    </div>
+
+                                    {% for dados in descricao %}
+                                    <div class="column one column_our_team_list">
+                                        <!-- Team Member Area -->
+                                        <div class="team team_list clearfix">
+                                            <!-- One Fourth (1/4) Column -->
+                                            <div class="column one-fourth">
+                                                <div class="image_frame no_link scale-with-grid">
+                                                    <div class="image_wrapper"><img class="scale-with-grid" src="{{dados.imagem.url}}" alt="{{dados.nome}}" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- One Second (1/2) Column -->
+                                            <div class="column one-second">
+                                                <div class="desc_wrapper">
+                                                    <h4>{{dados.nome}}</h4>
+                                                    <p class="subtitle">
+                                                        {{dados.cargo}}
+                                                    </p>
+                                                    <hr class="hr_color" />
+                                                    <div class="desc">
+
+                                                        <div class="big">
+                                                            <p>
+                                                                <strong>Atuação:</strong> {{dados.atuacao}}
+                                                            </p>
+                                                            <p>
+                                                                <strong>E-mail:</strong> {{dados.email}}
+                                                            </p>
+                                                            <p>
+                                                                <strong>Telefone:</strong> {{dados.telefone}}
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- One Fourth (1/4) Column -->
+                                            <div class="column one-fourth">
+                                                <center>
+                                                <div class="bq_wrapper">
+                                                    <aside class="widget widget_text">
+                                                       <h3> Redes Sociais</h3>
+                                                        <div class="textwidget">
+                                                           <a href="{{dados.face}}" class="icon_bar icon_bar_facebook icon_bar_small"><span class="t"><img src="{% static 'images/icones/icon_face.png' %}" alt="" width="40" height="40" /> </span><span class="b"><img src="{% static 'images/icones/icon_face.png' %}" alt="" width="40" height="40" /></span></a><a href="{{dados.gmais}}" class="icon_bar icon_bar_google icon_bar_small"><span class="t"><img src="{% static 'images/icones/icon_g.png' %}" alt="" width="40" height="40" /></i></span><span class="b"><img src="{% static 'images/icones/icon_g.png' %}" alt="" width="40" height="40" /></i></span></a><a href="{{dados.twitter}}" class="icon_bar icon_bar_twitter icon_bar_small"><span class="t"><img src="{% static 'images/icones/icon_twitter.png' %}" alt="" width="40" height="40" /></i></span><span class="b"><img src="{% static 'images/icones/icon_twitter.png' %}" alt="" width="40" height="40" /></i></span></a><a href="{{dados.instagram}}" class="icon_bar icon_bar_youtube icon_bar_small"><span class="t"><img src="{% static 'images/icones/icon_insta.png' %}" alt="" width="40" height="40" /></i></span><span class="b"><img src="{% static 'images/icones/icon_insta.png' %}" alt="" width="40" height="40" /></i><img src="{% static 'images/icones/icon_insta.png' %}" alt="" width="40" height="40" /></i></span></a>
+                                                        </div>
+                                                     </aside>
+                                                </div>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Page devider -->
+                                    <!-- One full width row-->
+                                    <div class="column one column_divider">
+                                        <div class="hr_dots hrmargin_b_40">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- Footer-->
+{% include 'footer.html' %}
+<!-- final Footer-->
+{% endblock %}

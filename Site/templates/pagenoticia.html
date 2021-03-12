@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="Subheader">
+                <div class="container">
+                    <div class="column one">
+                        <h1 class="title">Notícias</h1>
+                        <!--BreadCrumbs area-->
+                        <ul class="breadcrumbs">
+                            <li>
+                                <a href="{% url 'index' %}">Home</a><span><i - ></i></span>
+                            </li>
+                            <li>
+                                <a href="">Notícias</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!-- Main Content -->
+        <div id="Content">
+            <div class="content_wrapper clearfix">
+                <div class="sections_group">
+                    <div class="entry-content">
+                        <div class="section" style="padding-top:60px; padding-bottom:30px; background-color:#edeff2">
+                            <div class="section_wrapper clearfix">
+                                <div class="items_group clearfix">
+                                    <!-- One full width row-->
+                                    <div class="column one column_fancy_heading">
+                                        <div class="fancy_heading fancy_heading_icon">
+                                            <h2 class="title">Nossas principais notícias</h2>
+                                            <div class="inside">
+                                                <p class="big" style="margin: 0 10%;">
+                                                    Fique por dentro das nossas principais nóticias!!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section sections_style_3">
+                            <div class="section_wrapper clearfix">
+                                <div class="items_group clearfix">
+                                    <!-- One Fourth (1/4) Column -->
+                                    {% for noticia in noticia %}
+                                    <div class="column one-fourth column_image">
+                                        <div class="image_frame no_link scale-with-grid no_border aligncenter">
+                                            <div class="image_wrapper"><img class="scale-with-grid" src="{{ noticia.imagem.thumb.url }}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Three Fourth (3/4) Column -->
+                                    <div class="column three-fourth column_column">
+                                        <div class="column_attr ">
+                                            <div style="padding: 20px 25px; background: #f6f6f6; border-left: 1px solid #E6E6E6">
+                                                <h3 style="margin-bottom: 3px;">{{ noticia.titulo }}</h3>
+                                                <p class="big" style="color: #8E8E8E;">
+                                                    Instituto de Previdência
+                                                </p>
+                                                <div class="blockquote">
+                                                    <blockquote>
+                                                        Vitae adipiscing turpis. Aenean ligula nibh, molestie id viverra a, dapibus at dolor. In iaculis viverra neque, ac eleifend ante lobortis id. In in leo ultrices posuere ante viverra ipsum ...
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Page devider -->
+                                    <!-- One full width row-->
+                                    <div class="column one column_divider">
+                                        <hr class="no_line" />
+                                    </div>
+
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section the_content">
+                            <div class="section_wrapper">
+                                <div class="the_content_wrapper"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Footer-->
+{% include 'footer.html' %}
+<!-- final Footer-->
+{% endblock %}

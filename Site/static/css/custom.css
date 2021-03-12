@@ -1,0 +1,32 @@
+.table_cronograma{
+border: 1px solid #7a7;
+
+}
+
+.table_cronograma th{
+border: 1px solid #cdcdc1;
+
+}
+.table_cronograma td{
+border: 1px solid #cdcdc1;
+
+}
+
+.table_pesquisa{
+border: 1px solid #cdcdc1;
+width:80%;
+
+
+}
+
+.table_pesquisa th{
+border: 1px solid #cdcdc1;
+vertical-align: middle;
+
+
+}
+.table_pesquisa td{
+border: 1px solid #cdcdc1;
+vertical-align: middle;
+
+}

@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="Subheader">
+                <div class="container">
+                    <div class="column one">
+                        <h1 class="title">Histórico</h1>
+                        <!--BreadCrumbs area-->
+                        <ul class="breadcrumbs">
+                            <li>
+                                <a href="{% url 'index' %}">Home</a><span><i - ></i></span>
+                            </li>
+                            <li>
+                                <a href="{% url 'index' %}">Histórico</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<p>&nbsp;</p>
+        <!-- Main Content -->
+        <div id="Content">
+            <div class="content_wrapper clearfix">
+                <div class="sections_group">
+                    <div class="entry-content">
+                        <div class="section" style="padding-top:60px; padding-bottom:10px; background-color:#edeff2">
+                            <div class="section_wrapper clearfix">
+                                <div class="items_group clearfix">
+                                    <!-- One full width row-->
+                                    <div class="column one column_fancy_heading">
+                                        <div class="fancy_heading fancy_heading_icon">
+                                            <h2 class="title">
+                                                {% for titulo in titulo %} {{titulo.titulo}} {% endfor %}
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section sections_style_2">
+                            <div class="section_wrapper clearfix">
+                                <div class="items_group clearfix">
+                                    <!-- One Third (1/3) Column -->
+                                    {% for titulo in titulo %}
+                                    <div class="column one-third column_image">
+                                        <div class="image_frame no_link scale-with-grid no_border aligncenter">
+                                            <div class="image_wrapper"><img class="scale-with-grid" src="{{titulo.imagem.thumb.url}}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    <!-- Two Third (2/3) Column -->
+                                    {% for info in titulo %}
+                                    <div class="column two-third column_column">
+                                        <div class="column_attr ">
+                                            <!-- One Second (1/2) Column -->
+                                            <div class="column one-second">
+                                                <h2>{{info.subtitulo01}}</h2>
+                                                <p class="big">
+                                                    {{ info.descricao01|linebreaks }}
+                                                </p>
+                                            </div>
+                                            <!-- One Second (1/2) Column -->
+
+                                            <div class="column one">
+                                                <h2>{{info.subtitulo02}}</h2>
+                                                <p class="big">
+                                                    {{ info.descricao02|linebreaks }}
+                                                </p>
+
+                                                <div class="flv_align_right">
+                                                    <img alt="" src="images/home_business_signature.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+
+<!-- dados -->
+ {% include 'dados.html' %}
+<!-- final dados -->
+                        {% for info in titulo %}
+                        <div class="section sections_style_2">
+                            <div class="section_wrapper clearfix">
+                                <div class="items_group clearfix">
+                                    <!-- One full width row-->
+                                    <div class="column one column_fancy_heading">
+                                        <div class="fancy_heading fancy_heading_icon">
+                                            <h2 class="title">{{info.subtitulo03}}</h2>
+                                        </div>
+                                    </div>
+                                    <!-- One full width row-->
+                                    <div class="column one column_column">
+                                        <div class="column_attr align_center">
+                                            <div style="margin: 0 15%;">
+                                                <p>
+                                                    {{info.descricao03|linebreaks}}
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                        <div class="section the_content">
+                            <div class="section_wrapper">
+                                <div class="the_content_wrapper"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Footer-->
+{% include 'footer.html' %}
+<!-- final Footer-->
+{% endblock %}

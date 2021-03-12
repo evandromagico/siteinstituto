@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="Subheader">
+                <div class="container">
+                    <div class="column one">
+                        <h1 class="title">Credenciamento das Instituições Financeiras </h1>
+                        <!--BreadCrumbs area-->
+                        <ul class="breadcrumbs">
+                            <li>
+                                <a href="{% url 'index' %}">Home</a><span><i - ></i></span>
+                            </li>
+                            <li>
+                                <a href="{% url 'index' %}">Credenciamento das Instituições Financeiras </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<p>&nbsp;</p>
+
+
+<!-- Main Content -->
+        <div id="Content">
+            <div class="content_wrapper clearfix">
+                <div class="sections_group">
+                    <div class="extra_content">
+
+                    </div>
+                    <div class="section">
+                        <div class="section_wrapper clearfix">
+                            <!--  Filter Area -->
+                             <!-- One full width row-->
+                            <div class="column one column_blog">
+                              <div class="post-desc">
+                               <hr class="hr_color" />
+                               <p><a class="mfn-link mfn-link-3" ontouchstart="this.classList.toggle('hover');" data-hover= "Termo de Credenciamento – Orla DTVM Distribuidor" onclick="iniciaModal('modal-pdf')"style="cursor: pointer;" style="margin: 0px 0px"><span data-hover="Termo de Credenciamento – Orla DTVM Distribuidor">Termo de Credenciamento – Orla DTVM Distribuidor</span></a></p>
+                               <p><a class="mfn-link mfn-link-3" ontouchstart="this.classList.toggle('hover');" data-hover="Termo de Credenciamento – Orla DTVM Administrador" onclick="iniciaModal('modal-pdf')"style="cursor: pointer;" style="margin: 0px 0px"><span data-hover="Termo de Credenciamento – Orla DTVM Administrador">Termo de Credenciamento – Orla DTVM Administrador</span></a></p>
+                               <p><a class="mfn-link mfn-link-3" ontouchstart="this.classList.toggle('hover');" data-hover="Termo de Credenciamento – Caixa Econômica Federal Gestor" onclick="iniciaModal('modal-pdf')"style="cursor: pointer;" style="margin: 0px 0px"><span data-hover="Termo de Credenciamento – Caixa Econômica Federal Gestor">Termo de Credenciamento – Caixa Econômica Federal Gestor</span></a></p>
+                               <p><a class="mfn-link mfn-link-3" ontouchstart="this.classList.toggle('hover');" data-hover="Termo de Credenciamento – BB Gestão DTVM Gestor" onclick="iniciaModal('modal-pdf')"style="cursor: pointer;" style="margin: 0px 0px"><span data-hover="Termo de Credenciamento – BB Gestão DTVM Gestor">Termo de Credenciamento – BB Gestão DTVM Gestor</span></a></p>
+                               <p><a class="mfn-link mfn-link-3" ontouchstart="this.classList.toggle('hover');" data-hover="Termo de Credenciamento – Caixa Econômica Federal Administrador" onclick="iniciaModal('modal-pdf')"style="cursor: pointer;" style="margin: 0px 0px"><span data-hover="Termo de Credenciamento – Caixa Econômica Federal Administrador">Termo de Credenciamento – Caixa Econômica Federal Administrador</span></a></p>
+                               <p><a class="mfn-link mfn-link-3" ontouchstart="this.classList.toggle('hover');" data-hover="Termo de  Credenciamento – BB Gestão DTVM Administrador" onclick="iniciaModal('modal-pdf')"style="cursor: pointer;" style="margin: 0px 0px"><span data-hover="Termo de  Credenciamento – BB Gestão DTVM Administrador">Termo de  Credenciamento – BB Gestão DTVM Administrador</span></a></p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+<!-- Footer-->
+{% include 'footer.html' %}
+<!-- final Footer-->
+
+
+<!-- codigo e script para o modal -->
+<style>
+.modal-container {
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,.8);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index:2000;
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+}
+
+
+.modal-container.mostrar {
+
+display:flex;
+
+}
+
+.modalPDF {
+        background: white;
+        width: 70%;
+        height: 80%;
+        padding: 10px;
+        box-shadow: 0 0 0 10px white;
+        position: relative;
+        color: white;
+
+    }
+
+@keyframes modalAnim{
+
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.mostrar .modalPDF{
+    animation: modalAnim .3s;
+}
+.fechar {
+        position: absolute;
+        font-size: 2em;
+        top: -30px;
+        right: -30px;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,.3);
+
+    }
+
+</style>
+
+
+
+
+<div id="modal-pdf" class="modal-container">
+    <div class="modalPDF">
+         <button onclick="iniciaModalFechar('modal-pdf')" class="fechar">x</button>
+         <h3 style="color: black" align="center"> Termo de Credenciamento </h3>
+        <iframe src="{% static 'PDFfiles/exemplo_pdf.pdf' %}" width="100%" height="90%" type='application/pdf'> </iframe>
+
+    </div>
+
+
+</div>
+<script>
+  function iniciaModal(modalID){
+    const modal = document.getElementById(modalID);
+    modal.classList.add('mostrar');
+  }
+  function iniciaModalFechar(modalID){
+    const modal = document.getElementById(modalID);
+    modal.classList.remove('mostrar');
+  }
+
+</script>
+<!-- final codigo e script para o modal -->
+
+
+{% endblock %}
