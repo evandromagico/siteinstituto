@@ -135,5 +135,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 QUESTION_FILE_FORMAT = ['.jpg', '.pdf', '.txt', '.png']
 X_FRAME_OPTIONS = "SAMEORIGIN"
-
-

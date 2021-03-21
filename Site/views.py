@@ -11,7 +11,9 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from Site.forms import PerguntaModelForm
 from Site.models import Noticia, Categoria, ArquivoPDF, Historico, Principios, CodigoEtica, EquipeInstituto, \
     EquipeFiscal, EquipeDeliberativo, EquipeComite, Concursos, EducacaoPrevidenciaria, PlanoAcao, GestaoControleInterno, \
-    Questionario, Question, Choice
+    Questionario, Question, Choice, ConstituicaoFederal, CartilhaPrevidenciaria, PrePosAposentadoria, \
+    SegurancaInformacao, LeisFederais, InstrucoesNormativas, OrientacoesMps, PortariasMps, ResolucoesCmn, \
+    LeisMunicipais, PortariasInstituto
 
 
 class IndexView(TemplateView):
@@ -23,8 +25,6 @@ class IndexView(TemplateView):
         context['arquivo'] = ArquivoPDF.objects.all()
         context['titulo'] = Historico.objects.all()
         return context
-
-
 
 class historicoView(TemplateView):
     template_name = 'historico.html'
@@ -74,24 +74,51 @@ class planoAcaoView(TemplateView):
 
 class cartilhaPrevidenciariaView(TemplateView):
     template_name = 'cartilhaPrevidenciaria.html'
+    def get_context_data(self, **kwargs):
+        context = super(cartilhaPrevidenciariaView, self).get_context_data(**kwargs)
+        context['CartilhaPrevidenciaria'] = CartilhaPrevidenciaria.objects.order_by('-titulo').all()
+        return context
 
 class prePosAposentadoriaView(TemplateView):
     template_name = 'prePosAposentadoria.html'
+    def get_context_data(self, **kwargs):
+        context = super(prePosAposentadoriaView, self).get_context_data(**kwargs)
+        context['PrePosAposentadoria'] = PrePosAposentadoria.objects.order_by('-titulo').all()
+        return context
+
+
 
 class segurancaInformacaoView(TemplateView):
     template_name = 'segurancaInformacao.html'
+    def get_context_data(self, **kwargs):
+        context = super(segurancaInformacaoView, self).get_context_data(**kwargs)
+        context['SegurancaInformacao'] = SegurancaInformacao.objects.order_by('-titulo').all()
+        return context
 
 class constituicaoFederalView(TemplateView):
     template_name = 'constituicaoFederal.html'
+    def get_context_data(self, **kwargs):
+        context = super(constituicaoFederalView, self).get_context_data(**kwargs)
+        context['tituloConstituicao'] = ConstituicaoFederal.objects.order_by('-titulo').all()
+        return context
 
 class instrucoesNormativasView(TemplateView):
     template_name = 'instrucoesNormativas.html'
+    def get_context_data(self, **kwargs):
+        context = super(instrucoesNormativasView, self).get_context_data(**kwargs)
+        context['instrucoes'] = InstrucoesNormativas.objects.order_by('-titulo').all()
+        return context
 
 class orientacoesMpsView(TemplateView):
     template_name = 'orientacoesMps.html'
+    def get_context_data(self, **kwargs):
+        context = super(orientacoesMpsView, self).get_context_data(**kwargs)
+        context['orientacoesMps'] = OrientacoesMps.objects.order_by('-titulo').all()
+        return context
 
 class demonstrativoFinanceiroView(TemplateView):
     template_name = 'demostrativoFinanceiro.html'
+
 
 class acordaosTceView(TemplateView):
     template_name = 'acordaosTce.html'
@@ -254,22 +281,41 @@ def vote(request, question_id):
     return render(request, 'pesquisaSatisfacao.html')
 
 
-
-
 class leisFederaisView(TemplateView):
     template_name = 'leisFederais.html'
+    def get_context_data(self, **kwargs):
+        context = super(leisFederaisView, self).get_context_data(**kwargs)
+        context['LeisFederais'] = LeisFederais.objects.order_by('-titulo').all()
+        return context
+
 
 class portariasView(TemplateView):
     template_name = 'portarias.html'
+    def get_context_data(self, **kwargs):
+        context = super(portariasView, self).get_context_data(**kwargs)
+        context['PortariasMps'] = PortariasMps.objects.order_by('-titulo').all()
+        return context
 
 class resolucoesCmnView(TemplateView):
     template_name = 'resolucoesCMN.html'
+    def get_context_data(self, **kwargs):
+        context = super(resolucoesCmnView, self).get_context_data(**kwargs)
+        context['ResolucoesCmn'] = ResolucoesCmn.objects.order_by('-titulo').all()
+        return context
 
 class leisMunicipaisView(TemplateView):
     template_name = 'leismunicipais.html'
+    def get_context_data(self, **kwargs):
+        context = super(leisMunicipaisView, self).get_context_data(**kwargs)
+        context['LeisMunicipais'] = LeisMunicipais.objects.order_by('-titulo').all()
+        return context
 
 class portariasInstitutoView(TemplateView):
     template_name = 'portariasInstituto.html'
+    def get_context_data(self, **kwargs):
+        context = super(portariasInstitutoView, self).get_context_data(**kwargs)
+        context['PortariasInstituto'] = PortariasInstituto.objects.order_by('-titulo').all()
+        return context
 
 class audienciaPublicaView(TemplateView):
     template_name = 'audienciaPublica.html'

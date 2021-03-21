@@ -1,8 +1,9 @@
 from django.contrib import admin
-from .models import Question, Choice
+from .models import ConstituicaoFederal, CartilhaPrevidenciaria, PrePosAposentadoria, \
+    SegurancaInformacao, LeisFederais, InstrucoesNormativas, OrientacoesMps, PortariasMps, ResolucoesCmn, \
+    LeisMunicipais, PortariasInstituto
 from .models import Categoria, Noticia, ArquivoPDF, Historico, Principios, CodigoEtica, EquipeInstituto, \
-    EquipeDeliberativo, EquipeComite, EquipeFiscal, Concursos, EducacaoPrevidenciaria, PlanoAcao, GestaoControleInterno, \
-    Questionario
+    EquipeDeliberativo, EquipeComite, EquipeFiscal, Concursos, EducacaoPrevidenciaria, PlanoAcao, GestaoControleInterno
 
 
 @admin.register(Categoria)
@@ -61,14 +62,47 @@ class PlanoAcaoAdmin(admin.ModelAdmin):
 class GestaoControleInternoAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'arquivo', 'ativo', 'modificado')
 
-@admin.register(Questionario)
-class QuestionarioAdmin(admin.ModelAdmin):
-    list_display = ('pergunta', 'ruim', 'regular', 'bom', 'otimo')
 
+@admin.register(ConstituicaoFederal)
+class ConstituicaoFederalAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'arquivo', 'ativo', 'modificado')
 
+@admin.register(CartilhaPrevidenciaria)
+class CartilhaPrevidenciariaAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'arquivo', 'ativo', 'modificado')
 
-admin.site.register(Question)
+@admin.register(PrePosAposentadoria)
+class PrePosAposentadoriaAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'arquivo', 'ativo', 'modificado')
 
-@admin.register(Choice)
-class ChoiceAdmin(admin.ModelAdmin):
-    list_display = ('question', 'choice_text', 'votes', 'choice_text2', 'votes2', 'choice_text3', 'votes3', 'choice_text4', 'votes4')
+@admin.register(SegurancaInformacao)
+class SegurancaInformacaoAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'arquivo', 'ativo', 'modificado')
+
+@admin.register(LeisFederais)
+class LeisFederaisAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'arquivo', 'ativo', 'modificado')
+
+@admin.register(InstrucoesNormativas)
+class InstrucoesNormativasAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'arquivo', 'ativo', 'modificado')
+
+@admin.register(OrientacoesMps)
+class OrientacoesMpsAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'arquivo', 'ativo', 'modificado')
+
+@admin.register(PortariasMps)
+class PortariasMpsAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'arquivo', 'ativo', 'modificado')
+
+@admin.register(ResolucoesCmn)
+class ResolucoesCmnAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'arquivo', 'ativo', 'modificado')
+
+@admin.register(LeisMunicipais)
+class LeisMunicipaisAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'arquivo', 'ativo', 'modificado')
+
+@admin.register(PortariasInstituto)
+class PortariasInstitutoAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'arquivo', 'ativo', 'modificado')

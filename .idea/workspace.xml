@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19219dc5-fcbc-4700-a094-279fccc9d998" name="Default Changelist" comment="" />
+    <list default="true" id="19219dc5-fcbc-4700-a094-279fccc9d998" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Site/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/static/images/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/Site/static/images/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/static/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Site/static/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/static/images/logo_footer.png" beforeDir="false" afterPath="$PROJECT_DIR$/Site/static/images/logo_footer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/static/images/logo_maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/Site/static/images/logo_maps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/static/images/relatorio_gestao_pdf.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/cartilhaPrevidenciaria.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/cartilhaPrevidenciaria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/codigoEtica.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/codigoEtica.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/constituicaoFederal.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/constituicaoFederal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/educacaoPrevidenciaria.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/educacaoPrevidenciaria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/gestaoControle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/gestaoControle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/instrucoesNormativas.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/instrucoesNormativas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/leisFederais.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/leisFederais.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/leisMunicipais.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/leisMunicipais.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/maps.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/maps.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/noticias.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/noticias.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/orientacoesMps.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/orientacoesMps.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/planoAcao.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/planoAcao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/portarias.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/portarias.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/portariasInstituto.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/portariasInstituto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/prePosAposentadoria.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/prePosAposentadoria.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/resolucoesCMN.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/resolucoesCMN.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/segurancaInformacao.html" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/segurancaInformacao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/templates/templates.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Site/templates/templates.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Site/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Site/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/PDFfiles.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_instituto/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/site_instituto/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +44,9 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ncxLA4fZSg2iIa3dHplZYb7Zda" />
   <component name="ProjectViewState">

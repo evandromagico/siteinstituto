@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-{% for dados in codigo %}
+{% for  dados in codigo %}
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -33,7 +33,40 @@
                     <div class="extra_content">
 
                     </div>
+                    <div class="section">
+                        <div class="section_wrapper clearfix">
+                            <!--  Filter Area -->
+                             <!-- One full width row-->
+                            <div class="column one column_blog" align="center">
+                                <div class="blog_wrapper isotope_wrapper">
+                                    <!-- Masonry blog posts -->
+                                    <div class="posts_group lm_wrapper masonry isotope">
+                                        <div style="min-width: 300px"; class="post-175 post  format-standard has-post-thumbnail  category-motion category-photography category-uncategorized tag-eclipse tag-grid tag-mysql post-item isotope-item clearfix">
+                                            <div class="post-desc-wrapper">
+                                                <div class="post-desc">
+                                                    <div class="post-title">
+                                                        <h2 class="entry-title"><a onclick="iniciaModal('modal-pdf')"style="cursor: pointer;">{{dados.titulo}}</a></h2>
+                                                    </div>
+                                                    <hr class="hr_color" />
+                                                    <div class="post-excerpt">
+                                                        <span class="big">{{dados.descricao}}</span>
+                                                    </div>
 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                    <div class="column one column_divider">
+                                        <hr class="flv_margin_40">
+                                    </div>
+                                    <p>&nbsp;</p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -137,5 +170,6 @@ display:flex;
 </script>
 <!-- final codigo e script para o modal -->
 {% endfor %}
+
 {% endblock %}
 

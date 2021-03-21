@@ -11,9 +11,6 @@ class Base(models.Model):
     class Meta:
         abstract = True
 
-#questionario enquete pesquisa satisfação
-
-
 class Questionario(models.Model):
     pergunta = models.CharField('Pergunta', max_length=200)
     ruim = models.IntegerField('Ruim', default=0)
@@ -63,7 +60,6 @@ class Noticia(Base):
     titulo = models.CharField('Título', max_length=100)
     imagem = StdImageField('Imagem', upload_to='img_noticia', variations={'thumb': {'width': 359, 'height': 286, 'crop':True}})
     descricao = models.TextField('Descrição', max_length=200)
-
     class Meta:
         verbose_name = 'Notícia'
         verbose_name_plural = 'Noticias'
@@ -124,6 +120,7 @@ class Principios(Base):
 class CodigoEtica(Base):
     categoria = models.ForeignKey('Site.Categoria', verbose_name='Categoria', on_delete=models.CASCADE)
     arquivo = models.FileField('Arquivo', upload_to='PDFfiles')
+    descricao = models.TextField('Descrição', max_length=800)
     titulo = models.CharField('Título', max_length=100)
     class Meta:
         verbose_name = 'Código de Ética'
@@ -145,7 +142,6 @@ class EquipeInstituto(Base):
     class Meta:
         verbose_name = 'Equipe Instituto'
         verbose_name_plural = 'Equipe Instituto'
-
         def __str__(self):
             return self.EquipeInstituto
 
@@ -163,7 +159,6 @@ class EquipeFiscal(Base):
     class Meta:
         verbose_name = 'Equipe Conselho Fiscal'
         verbose_name_plural = 'Equipe Conselho Fiscal'
-
         def __str__(self):
             return self.EquipeFiscal
 
@@ -181,7 +176,6 @@ class EquipeDeliberativo(Base):
     class Meta:
         verbose_name = 'Equipe Conselho Deliberativo'
         verbose_name_plural = 'Equipe Conselho Deliberativo'
-
         def __str__(self):
             return self.EquipeDeliberativo
 
@@ -199,7 +193,6 @@ class EquipeComite(Base):
     class Meta:
         verbose_name = 'Equipe Comitê de Investimento'
         verbose_name_plural = 'Equipe Comitê de Investimento'
-
         def __str__(self):
             return self.EquipeInstituto
 
@@ -211,7 +204,6 @@ class Concursos(Base):
     class Meta:
         verbose_name = 'Concurso'
         verbose_name_plural = 'Concursos'
-
         def __str__(self):
             return self.Concursos
 
@@ -222,7 +214,6 @@ class EducacaoPrevidenciaria(Base):
     class Meta:
         verbose_name = 'Educação Previdênciaria'
         verbose_name_plural = 'Educação Previdênciaria'
-
         def __str__(self):
             return self.EducacaoPrevidenciaria
 
@@ -233,7 +224,6 @@ class PlanoAcao(Base):
     class Meta:
         verbose_name = 'Plano de Ação'
         verbose_name_plural = 'Plano de Ação'
-
         def __str__(self):
             return self.PlanoAcao
 
@@ -244,6 +234,115 @@ class GestaoControleInterno(Base):
     class Meta:
         verbose_name = 'Gestão e Controle Interno'
         verbose_name_plural = 'Gestão e Controle Interno'
-
         def __str__(self):
             return self.GestaoControleInterno
+
+class ConstituicaoFederal(Base):
+    titulo = models.CharField('Título', max_length=100)
+    descricao = models.TextField('Descrição', max_length=800)
+    arquivo = models.FileField('Arquivo', upload_to='PDFfiles')
+    class Meta:
+        verbose_name = 'Constituição Federal'
+        verbose_name_plural = 'Constituição Federal'
+        def __str__(self):
+            return self.ConstituicaoFederal
+
+class CartilhaPrevidenciaria(Base):
+    titulo = models.CharField('Título', max_length=100)
+    descricao = models.TextField('Descrição', max_length=800)
+    arquivo = models.FileField('Arquivo', upload_to='PDFfiles')
+    class Meta:
+        verbose_name = 'Cartilha Previdenciária'
+        verbose_name_plural = 'Cartilha Previdenciária'
+        def __str__(self):
+            return self.CartilhaPrevidenciaria
+
+class PrePosAposentadoria(Base):
+    titulo = models.CharField('Título', max_length=100)
+    descricao = models.TextField('Descrição', max_length=800)
+    arquivo = models.FileField('Arquivo', upload_to='PDFfiles')
+    class Meta:
+        verbose_name = 'Pré Pós Aposentadoria'
+        verbose_name_plural = 'Pré Pós Aposentadoria'
+        def __str__(self):
+            return self.PrePosAposentadoria
+
+class SegurancaInformacao(Base):
+    titulo = models.CharField('Título', max_length=100)
+    descricao = models.TextField('Descrição', max_length=800)
+    arquivo = models.FileField('Arquivo', upload_to='PDFfiles')
+    class Meta:
+        verbose_name = 'Segurança da Informação'
+        verbose_name_plural = 'Segurança da Informação'
+        def __str__(self):
+            return self.SegurancaInformacao
+
+class LeisFederais(Base):
+    titulo = models.CharField('Título', max_length=100)
+    descricao = models.TextField('Descrição', max_length=800)
+    arquivo = models.FileField('Arquivo', upload_to='PDFfiles')
+    class Meta:
+        verbose_name = 'Leis Federais'
+        verbose_name_plural = 'Leis Federais'
+        def __str__(self):
+            return self.LeisFederais
+
+class InstrucoesNormativas(Base):
+    titulo = models.CharField('Título', max_length=100)
+    descricao = models.TextField('Descrição', max_length=800)
+    arquivo = models.FileField('Arquivo', upload_to='PDFfiles')
+    class Meta:
+        verbose_name = 'Instruções Normativas'
+        verbose_name_plural = 'Instruções Normativas'
+        def __str__(self):
+            return self.InstrucoesNormativas
+
+class OrientacoesMps(Base):
+    titulo = models.CharField('Título', max_length=100)
+    descricao = models.TextField('Descrição', max_length=800)
+    arquivo = models.FileField('Arquivo', upload_to='PDFfiles')
+    class Meta:
+        verbose_name = 'Orientações Mps'
+        verbose_name_plural = 'Orientações Mps'
+        def __str__(self):
+            return self.OrientacoesMps
+
+class PortariasMps(Base):
+    titulo = models.CharField('Título', max_length=100)
+    descricao = models.TextField('Descrição', max_length=800)
+    arquivo = models.FileField('Arquivo', upload_to='PDFfiles')
+    class Meta:
+        verbose_name = 'Portarias Mps'
+        verbose_name_plural = 'Portarias Mps'
+        def __str__(self):
+            return self.PortariasMps
+
+class ResolucoesCmn(Base):
+    titulo = models.CharField('Título', max_length=100)
+    descricao = models.TextField('Descrição', max_length=800)
+    arquivo = models.FileField('Arquivo', upload_to='PDFfiles')
+    class Meta:
+        verbose_name = 'Resoluções Cmn'
+        verbose_name_plural = 'Resoluções Cmn'
+        def __str__(self):
+            return self.ResolucoesCmn
+
+class LeisMunicipais(Base):
+    titulo = models.CharField('Título', max_length=100)
+    descricao = models.TextField('Descrição', max_length=800)
+    arquivo = models.FileField('Arquivo', upload_to='PDFfiles')
+    class Meta:
+        verbose_name = 'Leis Municipais'
+        verbose_name_plural = 'Leis Municipais'
+        def __str__(self):
+            return self.LeisMunicipais
+
+class PortariasInstituto(Base):
+    titulo = models.CharField('Título', max_length=100)
+    descricao = models.TextField('Descrição', max_length=800)
+    arquivo = models.FileField('Arquivo', upload_to='PDFfiles')
+    class Meta:
+        verbose_name = 'Portarias Instituto'
+        verbose_name_plural = 'Portarias Instituto'
+        def __str__(self):
+            return self.PortariasInstituto
